@@ -6,14 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 
-class ApiEndPointController extends AbstractController
+class TestAPIController extends AbstractController
 {
-    #[Route('/api/end/point', name: 'app_api_end_point')]
+    #[Route('/api/test', name: 'app_test_api')]
     public function index(): JsonResponse
     {
         return $this->json([
-            'message' => 'Welcome to your new test!',
-            'path' => 'src/Controller/ApiEndPointController.php',
+            'message' => 'Welcome to your new controller!',
+            'path' => 'src/Controller/TestAPIController.php',
         ]);
     }
 }
